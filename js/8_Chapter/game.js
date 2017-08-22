@@ -2,17 +2,19 @@ var view = {
     displayMessage: function(msg) {
         var messageArea = document.getElementById("messageArea");
         messageArea.innerHTML = msg;
-       },   
+        },   
     displayHit: function(location) {
-        var cell = document.getElementById("location");
+        var cell = document.getElementById(location);
         cell.setAttribute("class", "hit");
-       }//,
-    // displayMiss: function(location){
-    //     var cell = document.getElementById("location");
-    //     cell.setAttribute("class", "miss");
-    // }      
+       },
+    displayMiss: function(location){
+        var cell = document.getElementById(location);
+        cell.setAttribute("class", "miss");
+    }      
 };
 
+view.displayHit("54");
+view.displayMiss("11");
 var model = {   
     boardSize: 7,   
     numShips: 3,   
@@ -36,7 +38,7 @@ var model = {
                 return true;             
             }    
         }
-       // view.displayMiss(guess);        
+        view.displayMiss(guess);        
         view.displayMessage("You missed.");
         return false;    
     },
