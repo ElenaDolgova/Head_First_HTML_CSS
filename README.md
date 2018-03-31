@@ -1,2 +1,2 @@
-# Izuchaem_HTML_CSS
+# Head_First_HTML_CSS
 Some things from book
